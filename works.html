@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хлебников Антон | Работы</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+    <div class="scanline"></div>
+    <div class="crt-screen">
+        
+
+        <div class="header">
+            === PORTFOLIO TERMINAL v1.0 ===<br>
+        </div>
+        <div class="menu">
+            <a href="./">
+                <div class="menu-item"> BACK</div>
+            </a>
+        </div>
+        <div class="content-screen">
+            <ul class="works-list">
+                <li class="work-item">Rabota</li>
+            </ul>
+            <div class="work__desc">
+                <div id="work-title" class="work__desc-title">
+
+                </div>
+                <div id="work-text" class="work_desc_text">
+
+                </div>
+            </div>
+            <div class="work__img">
+                <img id="prev-work" src="./works/Ailalab.png" alt="preview">
+            </div>
+            <div class="work__screen">
+                <img id="screen-work" src="./works/Ailalab-screen.png" alt="screen">
+            </div>
+        </div>
+
+        <div class="stats">
+            <span>EXP: 9999</span>
+            <span>LVL: 28</span>
+            <span>HP: ████████ 100%</span>
+        </div>
+    </div>
+
+    <script>
+        let idWork = document.location.search.split('=')[1];
+        let workList = document.querySelector('.works-list');
+
+        let works = null;
+
+        fetch('./works/works.json')
+            .then((response) => { return response.json(); })
+            .then((data) => {
+                works = data;
+                addWorks();
+            });
+
+        function addWorks() {
+            workList.innerHTML = '';
+            works.forEach(element => {
+                let li = `<li class="work-item ${element.id === idWork ? 'select' : ''}" onclick="onShowPrev(this)" url-prew="${element.preview}" data-id="${element.id}" data-title="${element.title}" data-desc="${element.desc}">> ${element.id}</li>`;
+                workList.innerHTML += li;   
+            });
+            onShowPrev(workList.querySelector('.work-item.select'));
+            
+        }
+        function onShowPrev(el) {
+            playTypeSound()
+            workList.querySelectorAll('.work-item').forEach((el)=> {
+                el.classList.remove('select')
+            });
+            el.classList.add('select')
+            document.getElementById('prev-work').setAttribute('src', el.getAttribute('url-prew'));
+            document.getElementById('work-title').innerHTML = el.getAttribute('data-title');
+            document.getElementById('work-text').innerHTML = el.getAttribute('data-desc');
+        }
+
+        
+    </script>
+    <script src="./btn_audio.js"></script>
+</body>
+
+</html>
