@@ -47,6 +47,7 @@ document.addEventListener('keydown', (e) => {
     const key = e.key;
     if (key >= '1' && key <= '4') {
         const sections = ['about', 'projects', 'skills', 'contact'];
-        showContent(sections[parseInt(key) - 1]);2
+        showContent(sections[parseInt(key) - 1]); 2
     }
 });
+
