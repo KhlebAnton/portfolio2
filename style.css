@@ -17,7 +17,9 @@
 ul {
     list-style: none;
 }
-
+html {
+    overflow: hidden;
+}
 body {
     background-color: #000;
     color: #0f0;
@@ -31,6 +33,7 @@ body {
     align-items: center;
     justify-content: center;
     min-width: 300px;
+    
 }
 
 a {
@@ -354,6 +357,7 @@ a {
     }
     body {
         padding: 0.5rem;
+        padding-bottom: 60px;
     }
     .crt-screen {
         padding: 0.5rem;
@@ -364,7 +368,9 @@ a {
 @media (max-width:450px) {
     html {
         font-size: 15px;
+        
     }
+   
     .ascii-art {
         
         font-size: 0.7rem;
