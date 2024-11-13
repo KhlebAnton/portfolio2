@@ -1,0 +1,5 @@
+User-agent: *
+Crawl-delay: 1
+Host: https://khlebdev.ru
+Disallow: /works.html
+Sitemap: http://https://khlebdev.ru/sitemap.txt
