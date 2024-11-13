@@ -27,7 +27,6 @@ body {
     line-height: 1.6;
     overflow: hidden;
     height: 100vh;
-    min-height: calc(100% - 0);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -342,7 +341,7 @@ a {
         height: 75%;
         display: grid;
         grid-template-rows: 40% 60%;
-        grid-template-columns: 40% 60%;
+        grid-template-columns: 50% 50%;
     }
     .work__screen {
        grid-row: 2;
@@ -350,14 +349,26 @@ a {
     }
     .works-list,.work__desc {
         grid-row: 1;
-        font-size: 12px;
+        font-size: 14px;
         padding: 5px;
+    }
+    body {
+        padding: 0.5rem;
+    }
+    .crt-screen {
+        padding: 0.5rem;
     }
 
 }
 
 @media (max-width:450px) {
     html {
-        font-size: 10px;
+        font-size: 15px;
     }
+    .ascii-art {
+        
+        font-size: 0.7rem;
+        
+    }
+    
 }
