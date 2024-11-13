@@ -19,8 +19,7 @@ ul {
 }
 html {
     overflow: hidden;
-    height: 100vh;
-    height: -webkit-fill-available;
+    height: 100%;
 }
 body {
     background-color: #000;
@@ -373,9 +372,6 @@ a {
     body {
         padding: 0.5rem;
         
-    }
-    html {
-        height: calc(100vh - 60px);
     }
     .crt-screen {
         padding: 0.5rem;
