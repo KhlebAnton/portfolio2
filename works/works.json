@@ -1,57 +1,81 @@
 [
     {
-        "id": "teplica",
-        "title": "Казань-теплица",
-        "preview": "./works/teplica.png",
-        "description": "Теплицы казани",
-        "link": "https://kazan-teplica.ru/",
-        "desc": "Cайт для продажи поликарбоната и теплиц в г.Казань",
-        "screen": [
-            "./works/teplica-screen.png"
-        ]
-    },
-    {
         "id": "ailalab",
         "title": "Aila Lab",
         "preview": "./works/Ailalab.png",
-        "description": "Лендинг ",
         "link": "https://khlebanton.github.io/Ailalab/",
         "desc": "Верстка лендинга по дизайну в psd",
-        "screen": [
-            "./works/Ailalab-screen.png"
-        ]
+        "screen": "./works/Ailalab-screen.png"
+        
+    },
+    {
+        "id": "teplica",
+        "title": "Казань-теплица",
+        "preview": "./works/teplica.png",
+        "link": "https://kazan-teplica.ru/",
+        "desc": "Cайт для продажи поликарбоната и теплиц в г.Казань",
+        "screen": "./works/teplica-screen.png"
+    },
+    {
+        "id": "imaginatiON",
+        "title": "imaginatiON",
+        "preview": "./works/imaginatiON.png",
+        "desc": "Верстка UI для игры",
+        "screen": "./works/imaginatiON-screen.png"
+    },
+    {
+        "id": "domstroy24",
+        "title": "ДомСтрой24",
+        "preview": "./works/domstroy24.png",
+        "link": "https://khlebanton.github.io/DomStroy24/",
+        "desc": "Копирование сайта с изменениями.",
+        "screen":"./works/domstroy24-screen.png"
+    },
+    {
+        "id": "ealive",
+        "title": "EAlive",
+        "preview": "./works/ealive.png",
+        "link": "https://khlebanton.github.io/Elina-Alive/",
+        "desc": "Вёрстка по дизайну в Figma",
+        "screen":"./works/ealive-screen.png"
+    },
+    {
+        "id": "kazah",
+        "title": "kazah Web App",
+        "preview": "./works/kazah.png",
+        "link": "https://khlebanton.github.io/Kaz/",
+        "desc": "Верстка игры Web App Телеграм",
+        "screen":"./works/kazah-screen.png"
+    },
+    {
+        "id": "mts-game",
+        "title": "MTS game",
+        "preview": "./works/mts-game.png",
+        "desc": "Верстка UI для игры",
+        "screen":"./works/mts-game-screen.png"
     },
     {
         "id": "roboschool",
         "title": "RoboSchool",
         "preview": "./works/robotSchool.png",
-        "description": "Лендинг для курсов",
         "link": "https://khlebanton.github.io/school_Robot/",
         "desc": "Тренировка в верстке по дизайну в Figma",
-        "screen": [
-            "./works/robotSchool-screen.png"
-        ]
+        "screen":"./works/robotSchool-screen.png"
     },
     {
         "id": "rumtibet",
         "title": "RumTibet",
         "preview": "./works/rumTibet.png",
-        "description": "Туры в Тибете",
         "link": "https://khlebanton.github.io/rumTibet/",
         "desc": "Тренировка в верстке по дизайну в Figma",
-        "screen": [
-            "./works/rumTibet-screen.png"
-        ]
+        "screen":"./works/rumTibet-screen.png"
     },
     {
         "id": "mybox",
         "title": "Mybox",
-        "preview": "./works/UI.png",
-        "description": "Интерфейс для игр",
+        "preview": "./works/mybox.png",
         "link": "https://github.com/KhlebAnton/MyBoxOleg.git",
         "desc": "Верстка интерфейса веб-игры для Майбокс.",
-        "screen": [
-            "./works/UI-screen.png","./works/UI-screen1.png","./works/UI-screen2.png","./works/UI-screen3.png"
-        ]
+        "screen": "./works/mybox-screen.png"
     }
 ]

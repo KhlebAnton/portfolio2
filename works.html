@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Хлебников Антон | Работы</title>
-    <link rel="stylesheet" href="./style.css?ver=10">
+    <link rel="stylesheet" href="./style.css?ver=11">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -32,14 +32,16 @@
 
                 </div>
                 <div id="work-text" class="work_desc_text">
-
+                    
                 </div>
             </div>
             <div class="work__img">
-                <img id="prev-work" src="./works/Ailalab.png" alt="preview">
+                <img id="prev-work" src="" alt="preview">
             </div>
             <div class="work__screen">
-                <img id="screen-work" src="./works/Ailalab-screen.png" alt="screen">
+                <img id="screen-work" src="" alt="screen">
+                
+                   
             </div>
         </div>
 
@@ -66,7 +68,7 @@
         function addWorks() {
             workList.innerHTML = '';
             works.forEach(element => {
-                let li = `<li class="work-item ${element.id === idWork ? 'select' : ''}" onclick="onShowPrev(this)" url-prew="${element.preview}" data-id="${element.id}" data-title="${element.title}" data-desc="${element.desc}">> ${element.id}</li>`;
+                let li = `<li class="work-item ${element.id === idWork ? 'select' : ''}" onclick="onShowPrev(this)" url-link="${element.link ? element.link : ''}" url-prew="${element.preview}" url-screen="${element.screen}" data-id="${element.id}" data-title="${element.title}" data-desc="${element.desc}">> ${element.id}</li>`;
                 workList.innerHTML += li;   
             });
             onShowPrev(workList.querySelector('.work-item.select'));
@@ -79,8 +81,12 @@
             });
             el.classList.add('select')
             document.getElementById('prev-work').setAttribute('src', el.getAttribute('url-prew'));
+            document.getElementById('screen-work').setAttribute('src', el.getAttribute('url-screen'));
             document.getElementById('work-title').innerHTML = el.getAttribute('data-title');
             document.getElementById('work-text').innerHTML = el.getAttribute('data-desc');
+            if(el.getAttribute('url-link') !== '') {
+                document.getElementById('work-text').innerHTML += `<a class="web-link" href="${el.getAttribute('url-link')}" target="_blank">> САЙТ</a>`
+            }
         }
 
         

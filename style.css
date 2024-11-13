@@ -354,7 +354,10 @@ a {
 .work-item:hover {
     border: 0.0625rem solid #0f0;
 }
-
+.work__desc-title {
+    font-weight: 900;
+    font-size: 1.2em;
+}
 .work-item.select {
     border: 0.0625rem solid #0f0;
     color: #000000;
@@ -373,9 +376,20 @@ a {
 
 }
 
+
 .work__screen img {
     width: 100%;
     opacity: 0.9;
+}
+.web-link {
+    display: block;
+    padding: 0.5rem;
+    transition: .3s;
+    
+}
+.web-link:hover {
+    background: #0f0;
+    color: #000;
 }
 
 .content-screen {
@@ -383,7 +397,7 @@ a {
     border: 0.0625rem solid #0f0;
     height: 75%;
     display: grid;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 40% 60%;
     grid-template-columns: 1fr 1fr 2fr;
 
 
