@@ -424,16 +424,7 @@ a {
 
 }
 
-.work__screen::after {
-    content: '';
-    z-index: 2;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    box-shadow: inset 0px 0px 150px 20px #002c00;
-}
+
 
 @media (max-width:1100px) {
     html {
