@@ -316,7 +316,7 @@ a {
 
 .work__img {
     position: relative;
-    background: #0f0;
+    /* background: #0f0; */
     grid-column-start: 2;
     grid-row-start: 2;
     max-height: 100%;
@@ -338,11 +338,32 @@ a {
 .work__img img {
     width: 100%;
     object-fit: cover;
-    object-position: 50% 0;
+    object-position: 50%;
     height: 100%;
-    opacity: 0.8;
+    /* opacity: 0.8; */
 }
-
+.loader-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #000;
+    transition: .2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loader-img::after {
+    content: 'Загрузка...';
+    position: absolute;
+    z-index: 5;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.loader-img.hidden {
+    opacity: 0;
+}
 .work-item {
     padding: 0.5rem;
     border: 0.0625rem solid rgba(0, 255, 0, 0);
@@ -372,14 +393,14 @@ a {
     grid-row: span 2 / span 2;
     grid-column-start: 3;
     grid-row-start: 1;
-    background: rgba(0, 255, 0, 0.356);
+    /* background: rgba(0, 255, 0, 0.356); */
 
 }
 
 
 .work__screen img {
     width: 100%;
-    opacity: 0.9;
+    /* opacity: 0.9; */
 }
 .web-link {
     display: block;
@@ -403,7 +424,7 @@ a {
 
 }
 
-.work__screen ::after {
+.work__screen::after {
     content: '';
     z-index: 2;
     position: absolute;

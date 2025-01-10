@@ -1,5 +1,14 @@
 [
     {
+        "id": "cg.pro",
+        "title": "Aila Lab",
+        "preview": "./works/cg.pro.png",
+        "link": "https://countergaming.pro/",
+        "desc": "Верстка по макету Figma",
+        "screen": "./works/cg.pro-screen.png"
+        
+    },
+    {
         "id": "ailalab",
         "title": "Aila Lab",
         "preview": "./works/Ailalab.png",
