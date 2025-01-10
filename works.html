@@ -84,19 +84,25 @@
             document.getElementById('prev-work').nextElementSibling.classList.remove('hidden');
             document.getElementById('screen-work').nextElementSibling.classList.remove('hidden');
             document.getElementById('prev-work').setAttribute('src', el.getAttribute('url-prew'));
+            let prevImgLoad = false;
             document.getElementById('prev-work').onload = function() {
-                document.getElementById('prev-work').nextElementSibling.classList.add('hidden');
+                prevImgLoad= true;
             }
             document.getElementById('screen-work').setAttribute('src', '');
             document.getElementById('screen-work').setAttribute('src', el.getAttribute('url-screen'));
+            
             document.getElementById('screen-work').onload = function() {
+                if(prevImgLoad) {
+                document.getElementById('prev-work').nextElementSibling.classList.add('hidden');
                 document.getElementById('screen-work').nextElementSibling.classList.add('hidden');
+            }
             }
             document.getElementById('work-title').innerHTML = el.getAttribute('data-title');
             document.getElementById('work-text').innerHTML = el.getAttribute('data-desc');
             if(el.getAttribute('url-link') !== '') {
                 document.getElementById('work-text').innerHTML += `<a class="web-link" href="${el.getAttribute('url-link')}" target="_blank">> САЙТ</a>`
             }
+            
         }
 
         
